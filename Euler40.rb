@@ -18,7 +18,7 @@ i = 1
 # While loop goes to 1,000,000 because d_1,000,000 is the last value we need to find. Of course, the loop
 # does not have to go this high, but we're playing it safe
 
-while i < 1000000
+while i < 1_000_000
 	string << i.to_s
 	i += 1
 end
@@ -33,9 +33,9 @@ d_1 = digits[0].to_i
 d_10 = digits[9].to_i
 d_100 = digits[99].to_i
 d_1000 = digits[999].to_i
-d_10000 = digits[9999].to_i
-d_100000 = digits[99999].to_i
-d_1000000 = digits[999999].to_i
+d_10000 = digits[9_999].to_i
+d_100000 = digits[99_999].to_i
+d_1000000 = digits[999_999].to_i
 
 #Calculate the final answer
 

@@ -1,14 +1,15 @@
-#Euler problem number 11
-#Solution by Alexander Leishman on 4/20/2013
-#What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 2020 grid?
-#Note: matrix of numbers is located in Euler11.txt
-#This will help me learn how to use matrices in Ruby
+# Euler problem 11
+# Solution by Alexander Leishman on 4/20/2013
+# URL: http://projecteuler.net/problem=11
 
-#Read data from Euler11.txt and put it into num_square variable
-# f = File.open('Euler11.txt')
-# a = f.readlines;
-# puts a.class.name
-# puts a[0][1]
+# Problem Text:
+# What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) 
+# in the 2020 grid?
+# Note: grid/matrix of numbers is located in Euler11.txt
+
+# This will help me learn how to use matrices in Ruby
+
+# Read data from Euler11.txt and put it into num_square variable
 
 matrix=[]  #Define empty matrix
 array  = File.read("Euler11.txt").split(" ") #read all text data in
@@ -18,8 +19,8 @@ start_j = 3
 type = ""
 
 for i in 0..19        #Break data into rows
-	first = i*20 
-	matrix[i]=array[first..first+19]
+  first = i*20 
+  matrix[i]=array[first..first+19]
 end
 
 for i in 0..19
@@ -86,15 +87,9 @@ for ii in 0..16
 			start_j = jj
 			type = "d2"
 		end
-
 	end
 end
 puts max_value
 puts start_i
 puts start_j
 puts type
-
-
-
-
-#Iterate by row and column the 4x4 multiplication possibilities

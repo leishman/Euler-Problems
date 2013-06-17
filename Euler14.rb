@@ -1,7 +1,8 @@
 #Project Euler Problem 14 Solution
 #Collatz Conjecture
 #By Alexander Leishman May 12, 2013
-#Smarter way to do it...Look to see if sequence length has been previously calculated and add
+
+#Note: Thought of smarter way to do it...Look to see if sequence length has been previously calculated. To be updated later
 
 # n  n/2 (n is even)
 # n  3n + 1 (n is odd)
@@ -36,12 +37,13 @@ end
 
 #Find longest chain
 
-integers = Array(1..1000000)	#Array from 1 to 1,000,000
+integers = Array(1..1_000_000)	#Array from 1 to 1,000,000
 chain_length = 0
 chain_start = 0
 integers.each do |num|
 
 	l = collatz(num)
+
 	if l > chain_length
 		chain_length = l
 		chain_start = num
